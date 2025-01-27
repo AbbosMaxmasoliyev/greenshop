@@ -4,8 +4,8 @@ const app = require('./server')
 
 const MONGO_URL =
   process.env.NODE_ENV === 'production'
-    ? 'mongodb://localhost:27017/greenshop'
-    : 'mongodb+srv://abbos:jn7nCxBBue1vU0tj@cluster0.adosdaq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    ? 'mongodb+srv://abbos:jn7nCxBBue1vU0tj@cluster0.adosdaq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    : 'mongodb://127.0.0.1:27017/greenshop'
 
 const PORT = process.env.PORT || 3000
 
