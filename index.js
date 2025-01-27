@@ -2,11 +2,10 @@ const mongoose = require('mongoose')
 
 const app = require('./server')
 
-
 const MONGO_URL =
   process.env.NODE_ENV === 'production'
-    ? 'mongodb://otajonmaxmasoliyev775:gFjQguufGrbS8zoL@undefined/?replicaSet=atlas-q0t0fp-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority'
-    : 'mongodb://localhost:27017/greenshop'
+    ? 'mongodb://localhost:27017/greenshop'
+    : 'mongodb+srv://abbos:jn7nCxBBue1vU0tj@cluster0.adosdaq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 const PORT = process.env.PORT || 3000
 
