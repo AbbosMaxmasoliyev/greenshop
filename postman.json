@@ -1,0 +1,295 @@
+{
+    "info": {
+        "name": "GreenShop API",
+        "description": "API requests for GreenShop",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Order",
+            "item": [
+                {
+                    "name": "Create Order",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"customerName\": \"John Doe\",\n  \"customerEmail\": \"john.doe@example.com\",\n  \"billingAddress\": {\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"countryRegion\": \"USA\",\n    \"townCity\": \"New York\",\n    \"streetAddress\": \"123 Main St\",\n    \"state\": \"NY\",\n    \"zip\": \"10001\",\n    \"emailAddress\": \"john.doe@example.com\",\n    \"phoneNumber\": \"123-456-7890\"\n  },\n  \"paymentMethod\": \"credit card\",\n  \"orderItems\": [\n    {\n      \"productId\": \"60d21b4667d0d8992e610c85\",\n      \"quantity\": 2\n    }\n  ],\n  \"orderTotal\": 100.0\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/orders",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "orders"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Orders",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/orders",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "orders"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Order by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/orders/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "orders",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Order",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"customerName\": \"Jane Doe\",\n  \"customerEmail\": \"jane.doe@example.com\",\n  \"billingAddress\": {\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"countryRegion\": \"USA\",\n    \"townCity\": \"Los Angeles\",\n    \"streetAddress\": \"456 Elm St\",\n    \"state\": \"CA\",\n    \"zip\": \"90001\",\n    \"emailAddress\": \"jane.doe@example.com\",\n    \"phoneNumber\": \"987-654-3210\"\n  },\n  \"paymentMethod\": \"paypal\",\n  \"orderItems\": [\n    {\n      \"productId\": \"60d21b4667d0d8992e610c85\",\n      \"quantity\": 1\n    }\n  ],\n  \"orderTotal\": 50.0\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/orders/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "orders",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Order",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:3000/orders/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "orders",
+                                ":id"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Flower",
+            "item": [
+                {
+                    "name": "Create Flower",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"Rose\",\n  \"color\": \"Red\",\n  \"image\": [\"image1.jpg\", \"image2.jpg\"],\n  \"price\": 10.0,\n  \"sku\": \"ROSE-RED-001\",\n  \"category\": [\"Valentine\", \"Anniversary\"],\n  \"size\": [\"Small\", \"Medium\"]\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/flowers",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Flowers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/flowers",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Flower by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/flowers/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Flower",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"Tulip\",\n  \"color\": \"Yellow\",\n  \"image\": [\"image3.jpg\", \"image4.jpg\"],\n  \"price\": 15.0,\n  \"sku\": \"TULIP-YELLOW-001\",\n  \"category\": [\"Spring\", \"Birthday\"],\n  \"size\": [\"Large\"]\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/flowers/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Flower",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:3000/flowers/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Search Flowers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/flowers/search?name=rose&color=red",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers",
+                                "search"
+                            ],
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "rose"
+                                },
+                                {
+                                    "key": "color",
+                                    "value": "red"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Filter Flowers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/flowers/filter?minPrice=5&maxPrice=20&sortBy=price",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "flowers",
+                                "filter"
+                            ],
+                            "query": [
+                                {
+                                    "key": "minPrice",
+                                    "value": "5"
+                                },
+                                {
+                                    "key": "maxPrice",
+                                    "value": "20"
+                                },
+                                {
+                                    "key": "sortBy",
+                                    "value": "price"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
